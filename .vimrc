@@ -116,8 +116,8 @@ nnoremap <leader>bl <C-W><C-L>
 nnoremap <leader>bh <C-W><C-H>
 
 " Remap buffer splitting keybindings
-nnoremap <leader>sv :vsplit<ENTER>
-nnoremap <leader>sh :sp<ENTER>
+nnoremap <leader>vs :vsplit<ENTER>
+nnoremap <leader>sp :sp<ENTER>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin Keybindings
