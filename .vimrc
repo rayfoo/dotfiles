@@ -136,3 +136,36 @@ nnoremap <leader>k :NERDTreeClose<Enter>
 " CTRLP
 " Launch CtrlP via leader key
 nnoremap <Leader>p :CtrlP<CR>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plugin Keybindings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" run Go-run command
+autocmd FileType go nmap <leader>gr  <Plug>(go-run)
+
+" run :GoBuild or :GoTestCompile based on the go file
+function! s:build_go_files()
+  let l:file = expand('%')
+  if l:file =~# '^\f\+_test\.go$'
+    call go#cmd#Test(0, 1)
+  elseif l:file =~# '^\f\+\.go$'
+    call go#cmd#Build(0)
+  endif
+endfunction
+
+autocmd FileType go nmap <leader>gb :<C-u>call <SID>build_go_files()<CR>
+
+" run :Go-Coverage-Toggle command
+autocmd FileType go nmap <Leader>gc <Plug>(go-coverage-toggle)
+
+" run :GoAlterate command to change from file and file_test
+autocmd Filetype go command! -bang <leader>ga call go#alternate#Switch(<bang>0, 'edit')
+autocmd Filetype go command! -bang <leader>gavs call go#alternate#Switch(<bang>0, 'vsplit')
+autocmd Filetype go command! -bang <leader>gasp call go#alternate#Switch(<bang>0, 'split')
+
+" Force all errors to be displayed in quickfix list
+let g:go_fmt_fail_silently = 1
+
+" Highlight golang types
+let g:go_highlight_types = 1
