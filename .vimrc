@@ -33,7 +33,6 @@ filetype plugin indent on    " required
 " Set leader key
 let mapleader="\<Space>"
 
-
 " Set Default font
 set guifont=Operator\ Mono\ 12
 
@@ -63,6 +62,7 @@ let g:airline_theme='simple'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use spaces instead of tabs
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set expandtab
 
 " Be smart when using tabs
