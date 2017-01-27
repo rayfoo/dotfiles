@@ -147,7 +147,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Plugin Keybindings
+" Golang Keybindings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " run Go-run command
 autocmd FileType go nmap <leader>gr  <Plug>(go-run)
