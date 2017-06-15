@@ -21,6 +21,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'sirver/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'joshdick/onedark.vim'
 
 " START OF PLUGINS
 " All of your Plugins must be added before the following line
@@ -28,6 +29,22 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 " END OF PLUGINS
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Themes 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+syntax on
+colorscheme onedark
+
+" Configure 24 bit colors
+if (empty($TMUX))
+    if (has("nvim"))
+      let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+        endif
+    if (has("termguicolors"))
+      set termguicolors
+    endif
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Global Settings
