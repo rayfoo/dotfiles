@@ -22,8 +22,16 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'sirver/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'joshdick/onedark.vim'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'slashmilli/alchemist.vim'
+Plugin 'tpope/vim-endwise'
+Plugin 'avdgaag/vim-phoenix'
+Plugin 'Shougo/neocomplete.vim'
+Plugin 'Shougo/neosnippet'
+Plugin 'Shougo/neosnippet-snippets'
+Plugin 'w0rp/ale'
 
-" START OF PLUGINS
+" START OF PLUGIN
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -78,6 +86,13 @@ let &t_EI = "\<Esc>]12;blue\x7"
 
 " Set color of airline
 let g:airline_theme='simple'
+
+" Enable neocomplete at start
+let g:neocomplete#enable_at_startup = 1
+
+" Enable universal linter
+let &runtimepath.=',~/.vim/bundle/ale'
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use spaces instead of tabs
