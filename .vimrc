@@ -100,6 +100,11 @@ let &runtimepath.=',~/.vim/bundle/ale'
 " Automatically clear ctrlp cache to avoid manual refresh after new files are
 " added
 let g:ctrlp_max_files=0 
+
+" Automatically show hidden files in nerdtree and ctrlp
+let NERDTreeShowHidden=1
+let g:ctrlp_show_hidden = 1
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use spaces instead of tabs
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
