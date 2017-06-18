@@ -111,7 +111,7 @@ let g:ctrlp_show_hidden = 1
 set expandtab
 
 " Be smart when using tabs
-" set smarttab
+set smarttab
 
 " 1 tab = 4 spaces
 set shiftwidth=2
