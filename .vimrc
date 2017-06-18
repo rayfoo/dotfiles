@@ -97,7 +97,9 @@ let g:neocomplete#enable_at_startup = 1
 " Enable universal linter
 let &runtimepath.=',~/.vim/bundle/ale'
 
-
+" Automatically clear ctrlp cache to avoid manual refresh after new files are
+" added
+let g:ctrlp_max_files=0 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use spaces instead of tabs
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
