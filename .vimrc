@@ -22,6 +22,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'sirver/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'joshdick/onedark.vim'
+Plugin 'tyrannicaltoucan/vim-quantum'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'slashmilli/alchemist.vim'
 Plugin 'tpope/vim-endwise'
@@ -42,7 +43,9 @@ filetype plugin indent on    " required
 " Themes 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on
-colorscheme onedark
+set background=dark
+set termguicolors
+colorscheme quantum
 
 " Configure 24 bit colors
 if (empty($TMUX))
