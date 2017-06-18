@@ -105,6 +105,11 @@ let g:ctrlp_max_files=0
 let NERDTreeShowHidden=1
 let g:ctrlp_show_hidden = 1
 
+" Set ignore options for ctrlp
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
+
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use spaces instead of tabs
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -220,3 +225,22 @@ let g:go_fmt_fail_silently = 1
 
 " Highlight golang types
 let g:go_highlight_types = 1
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Elixir / Alchemist keybindings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Remap Mix command
+nnoremap <leader>m :Mix <Enter>
+
+" Remap Mix test command
+nnoremap <leader>mt :Mix test<Enter>
+
+" Remap Mix deps.get command
+nnoremap <leader>mdg :Mix deps.get<Enter>
+
+" Remap Mix dogma (lint) command
+nnoremap <leader>ml :Mix dogma<Enter>
+
+" Remap Mix compile command
+nnoremap <leader>mc :Mix compile<Enter>
+
