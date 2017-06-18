@@ -31,6 +31,7 @@ Plugin 'Shougo/neocomplete.vim'
 Plugin 'Shougo/neosnippet'
 Plugin 'Shougo/neosnippet-snippets'
 Plugin 'w0rp/ale'
+Plugin 'duggiefresh/vim-easydir'
 
 " START OF PLUGIN
 " All of your Plugins must be added before the following line
