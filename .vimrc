@@ -89,7 +89,8 @@ let &t_SR = "\<Esc>]12;red\x7"
 let &t_EI = "\<Esc>]12;blue\x7"
 
 " Set color of airline
-let g:airline_theme='simple'
+let g:airline_theme='solarized'
+let g:airline_solarized_bg='dark'
 
 " Enable neocomplete at start
 let g:neocomplete#enable_at_startup = 1
@@ -197,46 +198,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Golang Keybindings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set autowrite
-
-" run Go-run command
-autocmd FileType go nmap <leader>gr  <Plug>(go-run)
-
-" run :GoBuild or :GoTestCompile based on the go file
-function! s:build_go_files()
-  let l:file = expand('%')
-  if l:file =~# '^\f\+_test\.go$'
-    call go#test#Test(0, 1)
-  elseif l:file =~# '^\f\+\.go$'
-    call go#cmd#Build(0)
-  endif
-endfunction
-
-autocmd FileType go nmap <leader>gb :<C-u>call <SID>build_go_files()<CR>
-
-" run :Go-Coverage-Toggle command
-autocmd FileType go nmap <Leader>gc <Plug>(go-coverage-toggle)
-
-" run :GoAlterate command to change from file and file_test
-autocmd Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
-autocmd Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
-autocmd Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
-
-
-" Force all errors to be displayed in quickfix list
-let g:go_list_type = "quickfix"
-
-" Keys for navigating quickfix list
-map <C-j> :cnext<CR>
-map <C-k> :cprevious<CR>
-nnoremap <leader>x :cclose<CR>
-
-" Highlight golang types
-let g:go_highlight_types = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-
+"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Elixir / Alchemist keybindings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""

@@ -21,5 +21,5 @@ PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
 # Golang Configurations
 export PATH=$PATH:/usr/local/go/bin
-export GOPATH=$HOME/workspace/go
+export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
