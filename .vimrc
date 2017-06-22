@@ -186,13 +186,6 @@ nnoremap <leader>k :NERDTreeClose<Enter>
 " Launch CtrlP via leader key
 nnoremap <Leader>p :CtrlP<CR>
 
-" Trigger configuration. Do not use <tab> if you use
-" https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Golang Keybindings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
