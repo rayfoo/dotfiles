@@ -28,7 +28,6 @@ Plugin 'avdgaag/vim-phoenix'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'Shougo/neosnippet'
 Plugin 'Shougo/neosnippet-snippets'
-Plugin 'w0rp/ale'
 Plugin 'duggiefresh/vim-easydir'
 
 " START OF PLUGIN
