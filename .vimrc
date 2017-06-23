@@ -189,7 +189,52 @@ nnoremap <Leader>p :CtrlP<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Golang Keybindings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"
+" Use auto write  to allow :GoBuild call without saving first
+set autowrite
+
+" All error windows will use quickfix window format
+let g:go_list_type = "quickfix"
+
+" Shortcuts for navigating errors in quick fix window
+map <C-j> :cnext<CR>
+map <C-k> :cprevious<CR>
+nnoremap <leader>x :cclose<CR>
+
+" Shortcut for building go
+autocmd FileType go nmap <leader>b  <Plug>(go-build)
+
+" Shortcut for running GO
+autocmd FileType go nmap <leader>r  <Plug>(go-run)
+
+" run :GoBuild or :GoTestCompile based on the go file
+function! s:build_go_files()
+  let l:file = expand('%')
+  if l:file =~# '^\f\+_test\.go$'
+    call go#test#Test(0, 1)
+  elseif l:file =~# '^\f\+\.go$'
+    call go#cmd#Build(0)
+  endif
+endfunction
+
+autocmd FileType go nmap <leader>gb :<C-u>call <SID>build_go_files()<CR>
+
+" Shortcut for test coverage
+autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
+
+" Automatically run fmt and complete import, remove if slowing down system
+let g:go_fmt_command = "goimports"
+
+" Syntax highlighting
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+
+" Use metalinter
+let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
+let g:go_metalinter_autosave = 1
+
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Elixir / Alchemist keybindings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
