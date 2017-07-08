@@ -175,13 +175,10 @@ let g:go_list_type = "quickfix"
 " Shortcuts for navigating errors in quick fix window
 map <C-j> :cnext<CR>
 map <C-k> :cprevious<CR>
-nnoremap <leader>x :cclose<CR>
-
-" Shortcut for building go
-autocmd FileType go nmap <leader>b  <Plug>(go-build)
+nnoremap <C-c> :cclose<CR>
 
 " Shortcut for running GO
-autocmd FileType go nmap <leader>r  <Plug>(go-run)
+autocmd FileType go nmap <leader>gr  <Plug>(go-run)
 
 " run :GoBuild or :GoTestCompile based on the go file
 function! s:build_go_files()
@@ -196,7 +193,7 @@ endfunction
 autocmd FileType go nmap <leader>gb :<C-u>call <SID>build_go_files()<CR>
 
 " Shortcut for test coverage
-autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
+autocmd FileType go nmap <Leader>gc <Plug>(go-coverage-toggle)
 
 " Automatically run fmt and complete import, remove if slowing down system
 let g:go_fmt_command = "goimports"
