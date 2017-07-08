@@ -7,7 +7,6 @@ filetype off                  " required
 call plug#begin('~/.vim/plugged')
 
 " let Vundle manage Vundle, required
-Plug 'VundleVim/Vundle.vim'
 Plug 'fatih/vim-go'
 Plug 'scrooloose/nerdtree'
 Plug 'kien/ctrlp.vim'
