@@ -12,21 +12,13 @@ Plug 'fatih/vim-go'
 Plug 'scrooloose/nerdtree'
 Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-surround'
-Plug 'scrooloose/nerdcommenter'
 Plug 'airblade/vim-gitgutter'
 Plug 'easymotion/vim-easymotion'
-Plug 'wikitopian/hardmode'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'joshdick/onedark.vim'
 Plug 'tyrannicaltoucan/vim-quantum'
-Plug 'elixir-lang/vim-elixir'
-Plug 'slashmilli/alchemist.vim'
 Plug 'tpope/vim-endwise'
-Plug 'avdgaag/vim-phoenix'
-Plug 'Shougo/neocomplete.vim'
-Plug 'Shougo/neosnippet'
-Plug 'Shougo/neosnippet-snippets'
 Plug 'duggiefresh/vim-easydir'
 
 " Initialize plugin system
@@ -101,8 +93,6 @@ let g:ctrlp_show_hidden = 1
 " Set ignore options for ctrlp
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
-
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use spaces instead of tabs
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -165,12 +155,6 @@ nnoremap <leader>sp :sp<ENTER>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin Keybindings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Hard Mode
-" Hardmode is enabled by default
-autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
-" Toggle Vim Hardmode
-nnoremap <leader><leader>h <Esc>:call ToggleHardMode()<CR>
-
 " Nerd Tree
 " Easier to open and close NerdTree
 nnoremap <leader>j :NERDTree<ENTER>
@@ -227,23 +211,3 @@ let g:go_highlight_methods = 1
 " Use metalinter
 let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
 let g:go_metalinter_autosave = 1
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Elixir / Alchemist keybindings
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Remap Mix command
-nnoremap <leader>m :Mix <Enter>
-
-" Remap Mix test command
-nnoremap <leader>mt :Mix test<Enter>
-
-" Remap Mix deps.get command
-nnoremap <leader>mdg :Mix deps.get<Enter>
-
-" Remap Mix dogma (lint) command
-nnoremap <leader>ml :Mix dogma<Enter>
-
-" Remap Mix compile command
-nnoremap <leader>mc :Mix compile<Enter>
-
