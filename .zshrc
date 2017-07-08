@@ -111,3 +111,15 @@ source $ZSH/oh-my-zsh.sh
 
 
 source "/home/rui/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
+
+# Prompt
+SPACESHIP_PROMPT_SEPARATE_LINE=false
+SPACESHIP_PROMPT_ADD_NEWLINE=true
+
+# Time
+SPACESHIP_TIME_SHOW=true
+
+# Execution Time
+SPACESHIP_EXEC_TIME_SHOW=false
+
+
