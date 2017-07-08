@@ -75,12 +75,6 @@ let &t_EI = "\<Esc>]12;blue\x7"
 let g:airline_theme='solarized'
 let g:airline_solarized_bg='dark'
 
-" Enable neocomplete at start
-let g:neocomplete#enable_at_startup = 1
-
-" Enable universal linter
-let &runtimepath.=',~/.vim/bundle/ale'
-
 " Automatically clear ctrlp cache to avoid manual refresh after new files are
 " added
 let g:ctrlp_max_files=0 
