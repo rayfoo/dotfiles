@@ -24,6 +24,14 @@ call plug#end()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Themes 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+syntax enable
+set background=dark " or light if you prefer the light version
+set t_Co=256
+
+" for vim 8
+ if (has("termguicolors"))
+  set termguicolors
+ endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Global Settings
@@ -56,8 +64,8 @@ let &t_SR = "\<Esc>]12;red\x7"
 let &t_EI = "\<Esc>]12;blue\x7"
 
 " Set color of airline
-let g:airline_theme='solarized'
-let g:airline_solarized_bg='dark'
+" let g:airline_theme='solarized'
+" let g:airline_solarized_bg='dark'
 
 " Automatically clear ctrlp cache to avoid manual refresh after new files are
 " added
