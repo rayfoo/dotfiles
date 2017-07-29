@@ -201,3 +201,9 @@ let g:go_highlight_methods = 1
 " Use metalinter
 let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
 let g:go_metalinter_autosave = 1
+
+" Column Setup for Go
+au FileType go set noexpandtab
+au FileType go set shiftwidth=4
+au FileType go set softtabstop=4
+au FileType go set tabstop=4
