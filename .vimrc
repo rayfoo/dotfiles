@@ -15,8 +15,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'easymotion/vim-easymotion'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'joshdick/onedark.vim'
-Plug 'tyrannicaltoucan/vim-quantum'
 Plug 'tpope/vim-endwise'
 Plug 'duggiefresh/vim-easydir'
 
@@ -26,20 +24,6 @@ call plug#end()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Themes 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-syntax on
-set background=dark
-set termguicolors
-colorscheme quantum
-
-" Configure 24 bit colors
-if (empty($TMUX))
-    if (has("nvim"))
-      let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-        endif
-    if (has("termguicolors"))
-      set termguicolors
-    endif
-endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Global Settings
