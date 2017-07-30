@@ -24,14 +24,6 @@ call plug#end()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Themes 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-syntax enable
-set background=dark " or light if you prefer the light version
-set t_Co=256
-
-" for vim 8
- if (has("termguicolors"))
-  set termguicolors
- endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Global Settings
