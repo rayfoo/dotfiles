@@ -26,8 +26,8 @@ alias gl="git log"
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
 # Golang Configurations
-export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/workspace/go
+export PATH=$PATH:$GOPATH/bin
 export GOBIN=$GOPATH/bin
 
 # Configure nvm
@@ -108,5 +108,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+############################
+# Bullet Train Configuration
+############################
 
 
