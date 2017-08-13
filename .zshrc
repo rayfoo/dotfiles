@@ -8,7 +8,10 @@ export ZSH=~/.oh-my-zsh
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="bullet-train"
+export TERM=xterm-256color
 
+# Enable Postgres Command Line Tools
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin  
 # Navigation Shortcuts
 alias ..="cd .."
 alias ...="cd ../.."

@@ -17,6 +17,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-endwise'
 Plug 'duggiefresh/vim-easydir'
+Plug 'mhartington/oceanic-next'
 
 " Initialize plugin system
 call plug#end()
@@ -24,6 +25,15 @@ call plug#end()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Themes 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Theme
+syntax enable
+
+" for vim 8
+ if (has("termguicolors"))
+  set termguicolors
+ endif
+
+colorscheme OceanicNext
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Global Settings
