@@ -1,14 +1,22 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# VS Code path
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="bullet-train"
+ZSH_THEME="spaceship"
 export TERM=xterm-256color
+
+# Switch python to v3
+alias python='/usr/local/bin/python3'
+
+
 
 # Enable Postgres Command Line Tools
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin  
@@ -117,3 +125,4 @@ source $ZSH/oh-my-zsh.sh
 ############################
 
 
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
